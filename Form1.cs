@@ -30,7 +30,6 @@ namespace Calculator
         private void ButtonEquals_Click(object sender, EventArgs e)
         {
             string formattedCalculation = currentCalculation.ToString();
-
             try
             {
                   textBox.Text = new DataTable().Compute(currentCalculation, null).ToString();
@@ -42,7 +41,6 @@ namespace Calculator
                textBox.Text = "0";
                currentCalculation = "";
            }
-
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -51,8 +49,7 @@ namespace Calculator
             {
                 currentCalculation = currentCalculation.Remove(currentCalculation.Length - 1, 1);
             }
-            textBox.Text = label1.Text = currentCalculation;
-            
+            textBox.Text = label1.Text = currentCalculation;    
         }
 
         private void buttonClearEntry_Click(object sender, EventArgs e)
